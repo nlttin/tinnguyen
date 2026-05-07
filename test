@@ -1,1 +1,21 @@
-
+{
+  "template": {
+    "settings": {
+      "index": {
+        "lifecycle": {
+          "name": "logs_delete_90days",
+          "rollover_alias": "hypaship-*"
+        },
+        "routing": {
+          "allocation": {
+            "include": {
+              "_tier_preference": "data_content"
+            }
+          }
+        }
+      }
+    },
+    "aliases": {},
+    "mappings": {}
+  }
+}
